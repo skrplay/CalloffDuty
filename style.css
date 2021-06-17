@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow: hidden;
+}
+section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(bg2.jpg);
+    background-size: cover;
+    background-position: center;
+    cursor: url('aim.png'),pointer;
+}
+/*active  a dar click*/
+section:active{
+    cursor: url('aim_red.png'),pointer;
+}
+.disparo{/*esta clase se creo por jascript*/
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: url('hole.png');
+    pointer-events: none;
+    transform: translate(30px,30px);
+
+}
+
+.sangre{
+    position: absolute;
+    display: inline-block;
+    width: 400px;
+    height: 400px;
+    background-size: cover;
+    z-index: 1000;
+    pointer-events: none;
+    transform: translate(-50%,-50%);
+    animation: mole 4s linear infinite;
+}
+/*/animacion de la sangre de el  mole doña maria /*/
+@keyframes mole {
+    
+    
+    0%,50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
